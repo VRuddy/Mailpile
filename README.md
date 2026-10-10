@@ -1,82 +1,51 @@
-# Welcome to Mailpile! #
+# Mailpile
 
-**IMPORTANT NOTE**
+Mailpile is an open source, privacy-focused e-mail client with search, tagging and encryption support.
 
-Development on this codebase has halted, until the
-[Python3 rewrite](https://community.mailpile.is/t/a-very-uninformative-progress-update-mailpile-2/785)
-has completed.
+## Project status (2026 reboot)
 
-Apologies to those who have unanswered, out-standing pull requests and
-issues. 😢 Your efforts are appreciated!
+This repository now targets a **community reboot** to make Mailpile usable again on modern systems in 2026.
 
-If you rely on this code and have your own branch which you actively
-maintain, let us know: we would be happy to link to it.
+- ✅ Legacy code and history are preserved in this repository.
+- 🔧 Porting and modernization work is in progress.
+- 📍 The migration plan is tracked in [`ROADMAP_2026.md`](./ROADMAP_2026.md).
 
-If you need to run Mailpile v1 to access legacy data, consider using
-our [legacy Docker images](https://github.com/mailpile/Mailpile-v1-Docker).
+If you need immediate access to legacy data today, use the maintained v1 Docker images:
+[mailpile/Mailpile-v1-Docker](https://github.com/mailpile/Mailpile-v1-Docker).
 
+## Why this reboot?
 
-------------------------------------------------------------------------
+The original codebase delivered innovative privacy and UX ideas, but large parts of the stack are now outdated.
+The 2026 effort focuses on:
 
-## Introduction (Obsolete) ##
+- compatibility with current Python, OS, browser and mail ecosystems,
+- safer defaults and modern security practices,
+- a maintainable contributor workflow (tests, CI, packaging, documentation),
+- progressive delivery so users can adopt improvements step by step.
 
-Mailpile (<https://www.mailpile.is/>) is a modern, fast web-mail client
-with user-friendly encryption and privacy features. The development of
-Mailpile is funded by
-[a large community of backers](https://www.mailpile.is/#community)
-and all code related to the project is and will be released under an OSI
-approved Free Software license.
+## Current priorities
 
-Mailpile places great emphasis on providing a clean, elegant user
-interface and pleasant user experience. In particular, Mailpile aims to
-make it easy and convenient to receive and send PGP encrypted or signed
-e-mail.
+1. Stabilize development environment and reproducible builds.
+2. Audit and refresh dependencies.
+3. Re-establish automated testing and CI gates.
+4. Port critical runtime paths to modern Python compatibility.
+5. Deliver a usable beta for real-world validation.
 
-Mailpile's primary user interface is web-based, but it also has a basic
-command-line interface and an API for developers. Using web technology
-for the interface allows Mailpile to function both as a local desktop
-application (accessed by visiting `localhost` in the browser) or a
-remote web-mail on a personal server or VPS.
+For detailed milestones, deliverables and success criteria, see [`ROADMAP_2026.md`](./ROADMAP_2026.md).
 
-The core of Mailpile is a fast search engine, custom written to deal
-with large volumes of e-mail on consumer hardware. The search engine
-allows e-mail to be organized using tags (similar to GMail's labels) and
-the application can be configured to automatically tag incoming mail
-either based on static rules or bayesian classifiers.
+## Contributing
 
+Contributions are welcome.
 
-### Trying Mailpile
+- Start with [`CONTRIBUTING.md`](./CONTRIBUTING.md)
+- Review developer notes in [`DEV_FAQ.md`](./DEV_FAQ.md)
+- Open issues for blockers discovered during porting work
 
-If you need to run Mailpile v1 to access legacy data, consider using
-our [legacy Docker images](https://github.com/mailpile/Mailpile-v1-Docker).
+When proposing changes, prefer small focused pull requests tied to a roadmap milestone.
 
+## Credits and license
 
-## Credits and License ##
+Mailpile was created by Bjarni R. Einarsson, with major contributions from Brennan Novak, Smári McCarthy, and many others.
 
-Bjarni R. Einarsson (<http://bre.klaki.net/>) created this!  If you
-think it's neat, you should also check out PageKite:
-<https://pagekite.net/>. [Smári](<http://www.smarimccarthy.is/>) and
-[Brennan](https://brennannovak.com) joined the team in 2013 and made
-this a real project (not just a toy search engine).
-
-The original GMail team deserve a mention for their inspiring work:
-wishing the Free Software world had something like GMail is what
-motivated Bjarni to start working on Mailpile. We would also like to
-thank Edward Snowden for inspiring us to try and make PGP usable for
-journalists and everday folks!
-
-Contributors:
-
-- Bjarni R. Einarsson (<http://bre.klaki.net/>)
-- Brennan Novak (<https://brennannovak.com/>)
-- Smari McCarthy (<http://www.smarimccarthy.is/>)
-- Lots more, run `git shortlog -s` for a list! (Or check
-  [GitHub](https://github.com/mailpile/Mailpile/graphs/contributors).)
-
-And of course, we couldn't do this without [our community of
-backers](https://www.mailpile.is/#community).
-
-This program is free software: you can redistribute it and/or modify it
-under the terms of the GNU Affero General Public License as published by
-the Free Software Foundation. See the file `COPYING.md` for details.
-
+This project is free software, licensed under the GNU Affero General Public License.
+See [`COPYING.md`](./COPYING.md) for details.
